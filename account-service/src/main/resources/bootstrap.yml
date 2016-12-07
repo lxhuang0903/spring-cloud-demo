@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: account-service
+#  cloud:
+#    config:
+#      label: feature
+
+description: bootstrap.yml in jar

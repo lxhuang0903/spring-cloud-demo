@@ -47,10 +47,9 @@
               profiles:
                 active: native
                 
-    c. sharing configuration with all applicationss
+    c. sharing configuration with all applications
     
     
-  ªª  
     
 ### Resources
 https://springcloud.cc/spring-cloud-config-zhcn.html

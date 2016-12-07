@@ -1,0 +1,7 @@
+server:
+  port: 9000
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888/
+description: application.yml in jar
