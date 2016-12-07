@@ -14,6 +14,8 @@ public class AccountServiceApplication {
 
 	@Value("${description}")
 	private String description;
+	@Value("${password:}")
+	private String password;
 
 	public static void main(String[] args) {
 		SpringApplication.run(AccountServiceApplication.class, args);
@@ -22,5 +24,10 @@ public class AccountServiceApplication {
 	@RequestMapping("/index")
 	public String index(){
 		return description;
+	}
+
+	@RequestMapping("/password")
+	public String getPassword(){
+		return password;
 	}
 }
