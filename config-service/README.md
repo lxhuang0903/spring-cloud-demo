@@ -13,7 +13,9 @@
    add @EnableConfigServer
  
 2. configuration for config server
+
     a. git backend : 
+    
        use remote git repository
             
             spring:
@@ -48,7 +50,9 @@
                 active: native
                 
     c. sharing configuration with all applications
+    
     d. encryption and decryption 
+       
        install JCE
        add key to bootstrap.yml of config server
        
@@ -59,10 +63,10 @@
         
          password: '{cipher}13b41ad240aaf1579b2291d373de802af6bcc5925396cdd0869db7ffc04dec83'
          
-       curl localhost:8888/encrypt -d mysecret
-       curl localhost:8888/decrypt -d 682bc583f4641835f
-       spring encrypt mysecret --key foo  
-       spring decrypt --key foo 682bc583f46418
+      - curl localhost:8888/encrypt -d mysecret
+      - curl localhost:8888/decrypt -d 682bc583f4641835f
+      - spring encrypt mysecret --key foo  
+      - spring decrypt --key foo 682bc583f46418
        
     e. Pattern Matching and Multiple Repositories
     

@@ -1,12 +1,12 @@
 server:
   port: 8888
-spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: file:///Users/ychuang/session/spring-cloud-demo/
-          search-paths: config-service/config-repo
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: file:///Users/ychuang/session/spring-cloud-demo/
+#          search-paths: config-service/config-repo
 
 #spring:
 #  cloud:
@@ -17,11 +17,11 @@ spring:
 #          basedir: /Users/ychuang/session/config-tmp
 #          search-paths: config-service/config-repo
 
-#spring:
-#  cloud:
-#    config:
-#      server:
-#        native:
-#          search-locations: file:///Users/ychuang/session/spring-cloud-demo/config-service/config-repo
-#  profiles:
-#    active: native
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: file:///Users/ychuang/session/spring-cloud-demo/config-service/config-repo
+  profiles:
+    active: native
