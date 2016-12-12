@@ -85,6 +85,13 @@
                          pattern: local*
                          uri: file:/home/configsvc/config-repo
        
+    f. Overriding values of remote properties
+       
+           spring:
+             cloud:
+               config:
+                 overrideNone: true
+                 overrideSystemProperties: false
 ### Resources
 https://springcloud.cc/spring-cloud-config-zhcn.html
                 

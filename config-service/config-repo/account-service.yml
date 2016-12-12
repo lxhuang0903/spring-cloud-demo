@@ -1,2 +1,7 @@
 description: account-service.yml in config-repo
 password: '{cipher}13b41ad240aaf1579b2291d373de802af6bcc5925396cdd0869db7ffc04dec83'
+spring:
+  cloud:
+    config:
+      overrideNone: true
+      overrideSystemProperties: false
