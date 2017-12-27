@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.yc</groupId>
-	<artifactId>eureka-service</artifactId>
+	<artifactId>portal-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>eureka-service</name>
+	<name>portal-service</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -17,10 +17,15 @@
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka-server</artifactId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
 		</dependency>
 	</dependencies>
 

@@ -1,0 +1,47 @@
+info:
+  name: ${spring.application.name}
+  port: ${server.port}
+  label: ${eureka.instance.metadataMap.label}
+eureka:
+  server:
+    enable-self-preservation: false
+    eviction-interval-timer-in-ms: 5000
+  instance:
+    metadataMap:
+      label: vm
+    instanceId: ${eureka.instance.hostname}:${server.port}
+    prefer-ip-address: true
+    lease-expiration-duration-in-seconds: 60
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    prefer-same-zone-eureka: true
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
+#      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+management:
+  security:
+    enabled: false
+---
+spring:
+  profiles: peer1
+eureka:
+  instance:
+    hostname: eureka1
+    metadataMap:
+      zone: hz
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8762/eureka/
+---
+spring:
+  profiles: peer2
+eureka:
+  instance:
+    hostname: eureka2
+    metadataMap:
+      zone: bj
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

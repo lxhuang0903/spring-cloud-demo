@@ -22,6 +22,6 @@ spring:
     config:
       server:
         native:
-          search-locations: file:///Users/ychuang/session/spring-cloud-demo/config-service/config-repo
+          search-locations: file:///Users/yuchao/github/spring-cloud-demo/config-service/config-repo
   profiles:
     active: native
